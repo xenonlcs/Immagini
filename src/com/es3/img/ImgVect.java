@@ -2,8 +2,9 @@ package com.es3.img;
 
 import com.es3.forme.Colore;
 import com.es3.forme.Forma;
+import com.es3.forme.Misurabile;
 
-public class ImgVect {
+public class ImgVect implements Comparable<ImgVect>{
     private int maxForme;
     private int cForme;
     private Forma[] forme;
@@ -21,19 +22,19 @@ public class ImgVect {
         }
     }
 
-    public double totArea() {
+    public double getSommaAree() {
         double area = 0;
         for (int i = 0; i < cForme; i++) {
-            area += forme[i].area();
+            area += forme[i].getArea();
         }
         return area;
     }
 
-    public double colorArea(Colore colore) {
+    public double getSommaAree(Colore colore) {
         double area = 0;
         for (int i = 0; i < cForme; i++) {
             if (forme[i].getColore() == colore) {
-                area += forme[i].area();
+                area += forme[i].getArea();
             }
         }
         return area;
@@ -61,5 +62,15 @@ public class ImgVect {
 
     public void setForme(Forma[] forme) {
         this.forme = forme;
+    }
+
+    @Override
+    public String toString(){
+        return "Immagine con " + cForme + " forme. Area totale: " + getSommaAree();
+    }
+
+    @Override
+    public int compareTo(ImgVect imgVect) {
+        return Double.compare(this.getSommaAree(), imgVect.getSommaAree());
     }
 }

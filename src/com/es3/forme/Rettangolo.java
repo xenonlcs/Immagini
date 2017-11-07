@@ -10,17 +10,17 @@ public class Rettangolo extends Forma {
     }
 
     public String toString(){
-        return "Rettangolo:\n Colore: " + colore + "\n Lato1: " + lato1 + "\n Lato2: " + lato2 + "\n Area: " + area() + "\n";
+        return "Rettangolo:\n Colore: " + colore + "\n Lato1: " + lato1 + "\n Lato2: " + lato2 + "\n Area: " + getArea() + "\n";
     }
 
 
     @Override
-    public double area() {
+    public double getArea() {
         return lato1 * lato2;
     }
 
     @Override
-    public double perimetro() {
+    public double getPerimetro() {
         return lato1 * 2 + lato2 * 2;
     }
 

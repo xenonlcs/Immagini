@@ -12,16 +12,16 @@ public class Cerchio extends Forma {
     }
 
     public String toString(){
-        return "Cerchio:\n Colore: " + colore + "\n Raggio: " + raggio + "\n Area: " + area() + "\n";
+        return "Cerchio:\n Colore: " + colore + "\n Raggio: " + raggio + "\n Area: " + getArea() + "\n";
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return raggio * raggio * PI;
     }
 
     @Override
-    public double perimetro() {
+    public double getPerimetro() {
         return raggio * 2 * PI;
     }
 

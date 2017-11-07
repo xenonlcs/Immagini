@@ -1,6 +1,6 @@
 package com.es3.forme;
 
-public abstract class Forma implements Comparable<Forma> {
+public abstract class Forma implements Misurabile {//implements Comparable<Forma> {
     Colore colore;
 
     public Forma(Colore colore) {
@@ -16,13 +16,13 @@ public abstract class Forma implements Comparable<Forma> {
         this.colore = colore;
     }
 
-    public abstract double area();
+    //public abstract double getArea();
 
-    public abstract double perimetro();
+    //public abstract double getPerimetro();
 
     @Override
     public int compareTo(Forma f){
-        return Double.compare(this.area(), f.area());
+        return Double.compare(this.getArea(), f.getArea());
     }
 
 }

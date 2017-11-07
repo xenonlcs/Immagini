@@ -9,16 +9,16 @@ public class Quadrato extends Forma  {
     }
 
     public String toString(){
-        return "Quadrato:\n Colore: " + colore + "\n Lato: " + lato + "\n Area: " + area() + "\n";
+        return "Quadrato:\n Colore: " + colore + "\n Lato: " + lato + "\n Area: " + getArea() + "\n";
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return lato * lato;
     }
 
     @Override
-    public double perimetro() {
+    public double getPerimetro() {
         return 4 * lato;
     }
 
