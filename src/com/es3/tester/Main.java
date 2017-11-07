@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        ImgVect immagine = new ImgVect(5);
+        ImgVect immagine = new ImgVect(10);
 
         Forma tempForma = new Cerchio(Colore.BLACK, 3);
         immagine.addForma(tempForma);
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Area per rosso: " +immagine.colorArea(Colore.RED));
         System.out.println("Area per nero: " +immagine.colorArea(Colore.BLACK) + "\n");
 
-        Arrays.sort(immagine.getForme());
+        Arrays.sort(immagine.getForme(), 0, immagine.getcForme());
         System.out.println("Array ordinato per area");
         for(int i=0; i<immagine.getcForme(); i++){
             System.out.println(immagine.getForme()[i]);
